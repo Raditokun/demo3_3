@@ -1,33 +1,33 @@
 #include <iostream>
+
 using namespace std;
 
-int main() {
+int main()
+{
     int n;
-    cout << "Masukkan suku n: ";
+    cout << "masukkan Nilai N: ";
     cin >> n;
-
-    int i = n;
-    do {
-        int j = n;
-        do {
-            int hasil;
-            if (j % 2 == 0) {
-                hasil = j;
-            } else {
-                hasil = -j;
-            }
-
-            cout << hasil;
-            if (j > i)
+    int i=n;
+    do
+    {
+        int j=i;
+        int hasil;
+        do
+        {
+            if (i%2==0)
             {
-                cout << ",";
+                hasil=j*-1;
 
+            }else
+            {
+                hasil=j*1;
             }
             j--;
-        } while (j >= i);
-        cout << endl;
+            cout << hasil << ",";
+        }while(j>=1);
         i--;
-    } while (i >= 1);
+        cout << endl;
+    }while(i>=1);
 
     return 0;
 }
